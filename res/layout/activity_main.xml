@@ -1,157 +1,161 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000000"
-        android:orientation="vertical"
-        android:weightSum="10" >
+        android:layout_height="match_parent" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:background="#000000"
             android:orientation="vertical"
             android:weightSum="10" >
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="0px"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:weightSum="10" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="7"
+                    android:gravity="center"
+                    android:text="IPCam\nConnect Server"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:textSize="30dp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="0px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbtnTCP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TCP     "
+                        android:textColor="#FFFFFF"
+                        android:buttonTint="#FFFFFF" />
+
+                    <RadioButton
+                        android:id="@+id/rbtnUDP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UDP     "
+                        android:textColor="#FFFFFF"
+                        android:buttonTint="#FFFFFF" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:weightSum="10" >
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="IP: "
+                    android:textColor="#FFFFFF"  />
+
+                <EditText
+                    android:id="@+id/etIP"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:background="#FFFFFF"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:weightSum="10" >
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="PORT: "
+                    android:textColor="#FFFFFF"  />
+
+                <EditText
+                    android:id="@+id/etPort"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="3"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="5"
-                android:text="Connect Server"
-                android:textColor="#FFFFFF"
-                android:textSize="30dp" />
-				
-			<RadioGroup 
-	            android:layout_width="wrap_content"
-	            android:layout_height="0px"
-	            android:layout_gravity="center_horizontal"
-	            android:layout_weight="5"
-	            android:orientation="horizontal" >
-                
-				<RadioButton
-	                android:id="@+id/rbtn_tcp"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="TCP     "
-	                android:textColor="#FFFFFF" />
-	
-				<RadioButton
-	                 android:id="@+id/rbtn_udp"
-	                 android:layout_width="wrap_content"
-	                 android:layout_height="wrap_content"
-	                 android:text="UDP     "
-	                 android:textColor="#FFFFFF" />
-                
-			</RadioGroup>
+                android:gravity="center"
+                android:weightSum="10" >
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/btnConn"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Connect" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="2"
-            android:weightSum="10" >
+                <Button
+                    android:id="@+id/btnExit"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Exit" />
 
-            <LinearLayout
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:orientation="vertical" >
             </LinearLayout>
 
-            <TextView
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="IP: "
-                android:textColor="#FFFFFF"  />
-
-            <EditText
-                android:id="@+id/et_ip"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:ems="10" >
-
-                <requestFocus />
-            </EditText>
-
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="2" 
-            android:weightSum="10" >
+    </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:orientation="vertical" >
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="PORT: "
-                android:textColor="#FFFFFF"  />
-
-            <EditText
-                android:id="@+id/et_port"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:ems="10"
-                android:inputType="number" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0px" 
-            android:layout_weight="3" 
-            android:layout_gravity="center_horizontal"
-            android:weightSum="10" >
-
-            <LinearLayout
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:orientation="vertical" >
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_conn"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="3"
-                android:text="Connect" />
-
-            <Button
-                android:id="@+id/btn_exit"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="3"
-                android:text="Exit" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

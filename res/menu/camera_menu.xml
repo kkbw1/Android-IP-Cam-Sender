@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_Camera"
+        android:title="Camera Setting" >
+
+        <menu>
+            <item
+                android:id="@+id/menu_start"
+                android:title="Preview Start" />
+            <item
+                android:id="@+id/menu_stop"
+                android:title="Preview Stop" />
+            <item
+                android:id="@+id/menu_change"
+                android:title="Camera Change" />
+            <item
+                android:id="@+id/menu_rotation"
+                android:title="Camera Rotation" />
+            <item
+                android:id="@+id/menu_resolution"
+                android:title="Camera Resolution" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/menu_property"
+        android:title="Camera Property" >
+
+        <menu>
+            <item
+                android:id="@+id/menu_p_anti"
+                android:title="Antibanding" />
+            <item
+                android:id="@+id/menu_p_color"
+                android:title="ColorEffect" />
+            <item
+                android:id="@+id/menu_p_flash"
+                android:title="FlashMode" />
+            <item
+                android:id="@+id/menu_p_focus"
+                android:title="FocusMode" />
+            <item
+                android:id="@+id/menu_p_thumb"
+                android:title="ThumbnailSize" />
+            <item
+                android:id="@+id/menu_p_picformat"
+                android:title="PictureFormat" />
+            <item
+                android:id="@+id/menu_p_picsize"
+                android:title="PictureSize" />
+            <item
+                android:id="@+id/menu_p_preformat"
+                android:title="PreviewFormat" />
+            <item
+                android:id="@+id/menu_p_prefpsrange"
+                android:title="PreviewFpsRange" />
+            <item
+                android:id="@+id/menu_p_prefps"
+                android:title="PreviewFps" />
+            <item
+                android:id="@+id/menu_p_presize"
+                android:title="PreviewSize" />
+            <item
+                android:id="@+id/menu_p_scene"
+                android:title="SceneMode" />
+            <item
+                android:id="@+id/menu_p_vidsize"
+                android:title="VideoSize" />
+            <item
+                android:id="@+id/menu_p_white"
+                android:title="WhiteBalance" />
+        </menu>
+
+    </item>
+
+</menu>

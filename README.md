@@ -7,3 +7,8 @@ Originally written in Eclipse IDE and re-made in Android Studio IDE.
 Development IDE: Android Studio  
 Language: Java  
 
+Connection Part UI Captured Image:  
+![Connect UI Image](Screenshot_Connection.jpg)  
+  
+Streaming Part UI Captured Image:
+![Stream UI Image](Screenshot_Stream.jpg)    
